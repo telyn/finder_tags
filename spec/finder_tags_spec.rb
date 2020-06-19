@@ -13,6 +13,9 @@ RSpec.describe FinderTags do
   GREY_NAME = "Released"
   describe "#tags" do
     subject { described_class.new("spec/test-data/#{file}").tags }
+    before do
+      skip "Can't use xattr on travis" if ENV["TRAVIS"]
+    end
 
     context "on the 'no-tag' test-data file" do
       let(:file) { "no-tag" }

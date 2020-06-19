@@ -49,5 +49,11 @@ class XattrLoader
   end
 end
 
-clear_all_xattrs
-XattrLoader.new(__dir__+"/xattrs").load_xattrs
+RSpec.configure do |config|
+  config.before(:each) do
+    next if ENV["TRAVIS"]
+
+    clear_all_xattrs
+    XattrLoader.new(__dir__+"/xattrs").load_xattrs
+  end
+end
