@@ -1,9 +1,11 @@
 # FinderTags
 
 Library and utilities for dealing with tags from Finder.
-They should run on any OS where
+It should run on any OS where xattrs are supported - but you'll only see tags on macOS I'd wager.
 
 ## Installation
+
+(This section is more of a coming-soon than how you actually install right now. At the moment you'll need to clone my binary_plist repo, build & install the gem there, and build & install the finder_tags gem yourself)
 
 Add this line to your application's Gemfile:
 
@@ -36,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/finder_tags.
+Bug reports and pull requests are welcome on GitHub at https://github.com/telyn/finder_tags.
 
 ## License
 
