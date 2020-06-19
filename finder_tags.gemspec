@@ -31,7 +31,12 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "binary_plist-parser", "~> 0.1.0"
+  spec.add_dependency "ffi-xattr", "~> 0.1.2"
+
   spec.add_development_dependency "bundler", "~> 2.0"
+  spec.add_development_dependency "fuubar", "~> 2.5"
+  spec.add_development_dependency "guard-rspec", "~> 4.7"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 end

@@ -21,7 +21,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "finder_tags"
+
+FinderTags.new("path/to/file").tags
+# => [#<struct FinderTags::Tag name="Cool Tag", color=:blue>]
+```
 
 ## Development
 
