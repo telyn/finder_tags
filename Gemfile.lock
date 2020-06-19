@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    finder_tags (0.1.0)
+    finder_tags (0.1.1)
       binary_plist-parser (~> 0.1.0)
       ffi-xattr (~> 0.1.2)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    binary_plist-parser (0.1.0)
+    binary_plist-parser (0.1.1)
     coderay (1.1.3)
     diff-lcs (1.3)
     ffi (1.13.1)
