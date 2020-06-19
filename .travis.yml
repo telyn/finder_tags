@@ -1,7 +1,22 @@
----
 sudo: false
 language: ruby
 cache: bundler
 rvm:
-  - 2.6.3
+  - "2.6"
+  - "2.7"
+
 before_install: gem install bundler -v 2.0.2
+
+script:
+  - bundle exec rspec
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: jv8chtPWSI+YvvKR+LWcrIKVbfx3C+Txj5Zx1yO0armgjneAiLZLlwHd6fdRb1s0KVTxqreN1CVYbgTbiKY7DKlEDJNEnFeCv3gbrcDyezuDyhK1Lxdi9OVuU5UUQCEJ8axF7A7tva8QPW1L+4vD6C68rPjSUhR/nycftHOMs/QCGWjBnVI69rmPuLzUIk/acFFodRL8b3TzbpKQZKD6W9tGYEiF4GGgFZHxaBaHx3rDPpe3EBU3qvE3Rz8qVPRxaL6d1RzXCMlqlNMZqscVvRAo/ZWfvuZ6OTiU4NzJ5+7mhLEKcTX1/USNuuC+Xp5IDDFckmGobrFhXNgSqGcg8bTjTOc/ZD1Nce4r+ctPNi7zXEkDehYEKw5b5SaiSzhJcXlzEQt5Y5+ZpKj3SxpihswtRK8IxBReLSUygXrjxzwbW3PQa52xcdoJ9VSIpmcnecdjObhwDMrh7mnAiWUmKUi+j0MbORfRuDfyBlG+y5fh42cocNvF3ylzZaLwkufR/umULsM/qVO8JFCT1kJ68uxXGai1jOM1qLoSFz5nsO5TwHyFEESfEAGDA0BQ71YUU5aywb2Jh0rIONjWtrA9ritFZJoLbifJ6uFfOx5WmOLzMnHKhXta+A8ndJbi3/wWYBNs9degrWF6vNVfygepqD/ycloveEL5yuAjEouSbic=
+  gem: finder_tags
+  on:
+    rvm: "2.7"
+    tags: true
+    repo: telyn/finder_tags
+  skip_cleanup: 'true'
