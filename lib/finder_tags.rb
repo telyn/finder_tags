@@ -3,6 +3,7 @@
 require "ffi-xattr"
 require "binary_plist/parser/bplist00"
 require "finder_tags/titlecase"
+require "stringio"
 
 using FinderTags::Titlecase
 

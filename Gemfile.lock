@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    finder_tags (0.1.1)
+    finder_tags (0.1.2)
       binary_plist-parser (~> 0.1.0)
       ffi-xattr (~> 0.1.2)
 
@@ -77,4 +77,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   2.0.2
+   2.1.2
