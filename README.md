@@ -5,8 +5,6 @@ It should run on any OS where xattrs are supported - but you'll only see tags on
 
 ## Installation
 
-(This section is more of a coming-soon than how you actually install right now. At the moment you'll need to clone my binary_plist repo, build & install the gem there, and build & install the finder_tags gem yourself)
-
 Add this line to your application's Gemfile:
 
 ```ruby
