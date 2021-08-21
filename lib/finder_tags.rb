@@ -47,13 +47,14 @@ class FinderTags
   end
 
   def legacy_tag
-    @legacy_tag ||=
-      begin
-        return Tag.new("None", :none) if tag_byte.nil?
+    @legacy_tag ||= find_legacy_tag
+  end
 
-        color = LEGACY_COLORS[tag_byte.to_i]
-        Tag.new(color.to_s.titlecase, color)
-      end
+  def find_legacy_tag
+    return Tag.new("None", :none) if tag_byte.nil?
+
+    color = LEGACY_COLORS[tag_byte.to_i]
+    Tag.new(color.to_s.titlecase, color)
   end
 
   def extended_tags

@@ -1,3 +1,11 @@
+AllCops:
+  NewCops: enable
+
+Metrics/BlockLength:
+  Exclude:
+    - Guardfile
+    - spec/**/*_spec.rb
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FinderTags
   module Titlecase
     refine String do

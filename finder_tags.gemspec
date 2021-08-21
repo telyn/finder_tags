@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Library & utility for reading tags from Finder.app"
   spec.homepage      = "https://github.com/telyn/finder_tags"
   spec.license       = "MIT"
+  spec.required_ruby_version = ">= 2.5"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
@@ -39,4 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard-rspec", "~> 4.7"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "rubocop", "~> 1.19"
+  spec.add_development_dependency "rubocop-rspec", "~> 2.4"
 end

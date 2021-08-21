@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
 require "finder_tags"
 # restore all the xattrs on the test-data folder prior to starting
-require_relative "./test-data/restore-xattrs.rb"
+require_relative "./test-data/restore-xattrs"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

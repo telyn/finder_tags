@@ -1,9 +1,10 @@
 #!/bin/ruby
+# frozen_string_literal: true
 
 require "ffi-xattr"
 
 def clear_all_xattrs
-  Dir[__dir__+"/*"].each do |file|
+  Dir["#{__dir__}/*"].each do |file|
     xattrs = Xattr.new(file)
     xattrs.each do |key|
       xattrs.remove(key)
@@ -18,6 +19,7 @@ class XattrLoader
     @fh = File.open(xattrs_file, "r")
   end
 
+  # rubocop:disable Metrics/MethodLength
   def load_xattrs
     @fh.each do |line|
       case line
@@ -33,6 +35,7 @@ class XattrLoader
     end
     commit_data
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
@@ -45,7 +48,7 @@ class XattrLoader
   end
 
   def read_hex(hex_strs)
-    hex_strs.split(" ").map { |x| x.to_i(16) }.pack("C*")
+    hex_strs.split.map { |x| x.to_i(16) }.pack("C*")
   end
 end
 
@@ -54,6 +57,6 @@ RSpec.configure do |config|
     next if ENV["TRAVIS"]
 
     clear_all_xattrs
-    XattrLoader.new(__dir__+"/xattrs").load_xattrs
+    XattrLoader.new("#{__dir__}/xattrs").load_xattrs
   end
 end

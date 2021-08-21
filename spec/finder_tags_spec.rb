@@ -1,16 +1,17 @@
 # frozen_string_literal: true
 
+# the default purple, blue and grey tags on my laptop have names focussed
+# around music production, which is a bonus cause it means I didn't have to
+# make any extra effort to test the modern tag names :)
+PURPLE_NAME = "Cool Track"
+BLUE_NAME = "Cool Noise"
+GREY_NAME = "Released"
+
 RSpec.describe FinderTags do
   it "has a version number" do
     expect(FinderTags::VERSION).not_to be nil
   end
 
-  # the default purple, blue and grey tags on my laptop have names focussed
-  # around music production, which is a bonus cause it means I didn't have to
-  # make any extra effort to test the modern tag names :)
-  PURPLE_NAME = "Cool Track"
-  BLUE_NAME = "Cool Noise"
-  GREY_NAME = "Released"
   describe "#tags" do
     subject { described_class.new("spec/test-data/#{file}").tags }
     before do
