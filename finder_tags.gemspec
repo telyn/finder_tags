@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "binary_plist-parser", "~> 0.1.0"
-  spec.add_dependency "ffi-xattr", "~> 0.1.2"
+  spec.add_dependency "ffi-xattr", ">= 0.1.2", "< 0.3.0"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "fuubar", "~> 2.5"
